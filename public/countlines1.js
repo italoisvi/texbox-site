@@ -45,6 +45,5 @@ const countLinesOfCode = () => {
   
   // Adicionar o evento de clique ao botão "Contar Linhas"
   document.getElementById('countButton').addEventListener('click', () => {
-    console.log('Botão clicado!')
     countLinesOfCode();
   });
