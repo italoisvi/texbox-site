@@ -1,5 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Linhas de Código</title>
+<script type="text/javascript">
+jan = null;
+function AbrirJanela() {
+	jan = open("","JanelaSecundaria","scrollbars=yes,width=400,height=230");
+	jan.document.write("<H2>Janela secundária</H2><HR>");
+}
+function MaisTexto() {
+	if (jan != null && !jan.closed) {
+	    jan.document.write("<P>Mais texto ...<BR>");
+       jan.focus();
+	}
+	else
+	    alert ("Não é possível escrever numa janela fechada !");
+}
+</script>
+</head>
+<body>
+    <h3>Criação e manipulação de janelas secundárias</h3>
+    <form>
+    <input type="button" value="Abrir Janela" onclick="AbrirJanela()">
+    <input type="button" value="Escrever na Janela" onclick="MaisTexto()">
+    <input type="button" value="Fechar Janela" onclick="if (!jan.closed) jan.close()">
+    </form>
+</body>
+</html>
+
+<!-- <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +41,10 @@
   <form id="repoForm">
     <label for="repoUrl">Insira a URL do repositório GitHub:</label>
     <input type="text" id="repoUrl" required>
-    <!-- Altere o tipo do botão para "button" -->
     <button type="button" id="countButton">Contar Linhas</button>
   </form>
 
-  <!-- Referência ao arquivo JavaScript externo -->
+  
   <script src="script.js"></script>
 </body>
-</html>
+</html> -->
