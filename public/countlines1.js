@@ -1,8 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const axios = require('axios');
-const prompt = require('prompt-sync')({sigint: true});
-
 // Função para contar as linhas de código do repositório
 const countLinesOfCode = () => {
   const repoUrl = document.getElementById('repoUrl').value;
